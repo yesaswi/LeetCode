@@ -32,7 +32,11 @@ public:
 /*
 Algorithm
 
-First of all we should take care of some edge cases. All negative numbers are not palindrome, for example: -123 is not a palindrome since the '-' does not equal to '3'. So we can return false for all negative numbers.
+First of all we should take care of some edge cases. All negative numbers are not palindrome, 
+
+for example: -123 is not a palindrome since the '-' does not equal to '3'. So we can return false 
+
+for all negative numbers.
 
 Now let's think about how to revert the last half of the number. For number 1221, if we do 1221 % 10,
 
@@ -48,7 +52,9 @@ Continuing this process would give us the reverted number with more digits.
 
 Now the question is, how do we know that we've reached the half of the number?
 
-Since we divided the number by 10, and multiplied the reversed number by 10, when the original number is less than the reversed number, it means we've processed half of the number digits.
+Since we divided the number by 10, and multiplied the reversed number by 10, when the original number is 
+
+less than the reversed number, it means we've processed half of the number digits.
 
 */
 
