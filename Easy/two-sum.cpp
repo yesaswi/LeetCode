@@ -17,3 +17,27 @@ public:
         return result;
     }
 };
+
+// Two Pointers approach
+// Note : Given Elements must be sorted
+// Time Complexity O(N)
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result;
+        int low, high;
+        low = 0, high = nums.size() - 1;
+        for(int i = 0; i < nums.size(); i++){
+            if( nums [low] + nums [high] == target){
+                result.push_back(low);
+                result.push_back(high);
+                return result;
+            }
+            else if(nums [low] + nums [high] < target && high!=low)
+                low+=1;
+            else if(nums [low] + nums [high] > target && high!=low)
+                high-=1;
+        }
+        return result;
+    }
+};
