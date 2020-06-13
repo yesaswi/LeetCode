@@ -108,7 +108,7 @@ public:
 };
 
 // Map Approach
-// Time Complexity O(logN)
+// Time Complexity O(N)
 // Runtime: 20 ms
 // Memory Usage: 10.2 MB
 class Solution {
