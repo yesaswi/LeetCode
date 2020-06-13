@@ -115,16 +115,15 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> result;
-        map <int, int> HashMap;
+        unordered_map <int, int> HashMap;
         for(int i = 0; i < nums.size(); i++){
             HashMap.insert(make_pair(nums[i],i));
-            map<int, int>::iterator it ;
-            it = HashMap.find(target - nums [i] );
+            auto it = HashMap.find(target - nums [i] );
             if(it != HashMap.end() && it->second!= i){
                 result.push_back(i);
                 result.push_back(it->second);
                 return result;
-            } 
+            }
         }
         return result;
     }
