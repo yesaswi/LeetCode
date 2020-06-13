@@ -41,3 +41,59 @@ public:
         return result;
     }
 };
+
+// Using STL Find
+// Note : Given Elements must be sorted
+// Time Complexity O(N)
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result;
+        for(int i = 0; i < nums.size(); i++){
+            int ele = nums[i];
+            int compEle = target - ele;
+            vector <int>::iterator i1;
+            i1 = std::find(nums.begin(), nums.end(), compEle);
+            if(i1 != nums.end()){
+                result.push_back(i);
+                result.push_back(i1-nums.begin());
+                return result;
+            }
+        }
+        return result;
+    }
+};
+
+// Using Binary Search
+// Note : Given Elements must be sorted
+// Time Complexity O(N)
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result;
+        for(int i = 0; i < nums.size(); i++){
+            int ele = nums[i];
+            int compEle = target - ele;
+            int index = binarySearch(nums, 0, nums.size() -1, compEle);
+            if(index != - 1){
+                result.push_back(i);
+                result.push_back(index);
+                return result;
+            }
+        }
+        return result;
+    }
+    
+    int binarySearch(vector<int> arr, int p, int r, int num) {
+        if (p <= r) {
+            int mid = (p + r)/2; 
+        if (arr[mid] == num)   
+            return mid ; 
+        if (arr[mid] > num)  
+            return binarySearch(arr, p, mid-1, num);            
+        if (arr[mid] > num)
+            return binarySearch(arr, mid+1, r, num); 
+   }
+   return -1; 
+}   
+};
