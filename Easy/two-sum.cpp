@@ -44,7 +44,7 @@ public:
 
 // Using STL Find
 // Note : Given Elements must be sorted
-// Time Complexity O(N)
+// Time Complexity O(NLogN)
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -66,7 +66,7 @@ public:
 
 // Using Binary Search
 // Note : Given Elements must be sorted
-// Time Complexity O(N)
+// Time Complexity O(NLogN)
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
