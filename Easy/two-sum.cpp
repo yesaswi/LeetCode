@@ -1,5 +1,7 @@
 // Brute Force Approach
 // Time Complexity O(N^2)
+// Runtime: 580 ms
+// Memory Usage: 9.1 MB
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
